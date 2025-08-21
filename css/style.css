@@ -1,0 +1,26 @@
+@import url('reset.css');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background-color: #0f172a;
+    color: #fff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-block-size: 100%;
+    overflow: clip;
+}
+
+.wrapper > main {
+    flex-grow: 1;
+}
+
+/*Обмежуючий контейнер*/
+[class*="__container"] {
+    max-inline-size: 1310px; /*1280 + 15 + 15*/
+    margin-inline: auto;
+    padding-inline: 15px;
+}
