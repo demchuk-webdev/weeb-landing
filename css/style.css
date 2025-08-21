@@ -1,4 +1,5 @@
 @import url('reset.css');
+@import url('components.css');
 
 body {
     font-family: "Roboto", sans-serif;
@@ -24,3 +25,5 @@ body {
     margin-inline: auto;
     padding-inline: 15px;
 }
+
+@import url(header.css);
