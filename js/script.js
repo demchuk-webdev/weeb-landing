@@ -1,8 +1,8 @@
 "use strict"
 
-let documentActions = (e) =>{
+let documentActions = (e) => {
     const targetElement = e.target
-    if(targetElement.closest('.icon-menu')) {
+    if (targetElement.closest('.icon-menu')) {
         document.documentElement.classList.toggle('open-menu')
     }
 }
