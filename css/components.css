@@ -125,7 +125,7 @@
 
 @media (max-width: 991.81px) {
     .block-header__title {
-        font-size: 65px;
+        font-size: 56px;
     }
 
     .block-header__line::before {
@@ -148,5 +148,17 @@
 
     .block-header__line--top::before {
         top: 8px;
+    }
+}
+
+@media (max-width: 479.81px) {
+    .button--white-border {
+        width: 100%;
+        height: auto;
+    }
+
+    .block-header__buttons {
+        flex-direction: column;
+        align-items: stretch;
     }
 }
