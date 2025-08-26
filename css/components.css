@@ -76,11 +76,24 @@
 
 /* ---------------------------------------------------------------------------------------- */
 .label {
-
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
+
+.label--margin {
+    margin-bottom: 16px;
+}
+
 /* ---------------------------------------------------------------------------------------- */
 .block-header {
-    
+    display: grid;
+    gap: 32px;
+}
+
+.block-header--center {
+    justify-content: center;
 }
 
 .block-header__title {
@@ -94,13 +107,25 @@
     display: inline-block;
 }
 
+.block-header--border,
 .block-header__line {
     position: relative;
 }
 
+.block-header--border span,
 .block-header__line span {
     position: relative;
     z-index: 2;
+}
+
+.block-header--border::before {
+    content: "";
+    height: 100%;
+    width: 96%;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    border: 5px solid #c2410c;
 }
 
 .block-header__line::before {
@@ -123,6 +148,10 @@
     width: 97%;
 }
 
+.block-header__lite-purpur {
+    color: #c084fc
+}
+
 .block-header__purpur {
     color: #9333EA
 }
@@ -143,6 +172,33 @@
 
 .block-header__button {}
 
+.block-header__link {
+    justify-self: start;
+    padding-right: 35px;
+    background: url(../img/icons/arrow.svg) right no-repeat;
+}
+
+.block-header__link span {
+    position: relative;
+    display: inline-block;
+    line-height: 1.2;
+}
+
+.block-header__link span::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    transition: width 0.5s;
+    left: 0;
+    bottom: 0;
+    background-color: #9333ea;
+}
+
+.block-header__link:hover span::after {
+    width: 100%;
+}
+
 @media (max-width: 991.81px) {
     .block-header__title {
         font-size: 56px;
@@ -154,6 +210,11 @@
 
     .block-header__line--top::before {
         top: 12px;
+    }
+
+    .block-header--border::before {
+        left: -7px;
+        border: 3px solid #c2410c;
     }
 }
 
@@ -169,6 +230,12 @@
     .block-header__line--top::before {
         top: 8px;
     }
+
+    .block-header--border::before {
+        left: -5px;
+        border: 2px solid #c2410c;
+    }
+
 }
 
 @media (max-width: 479.81px) {
