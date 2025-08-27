@@ -107,15 +107,26 @@
     display: inline-block;
 }
 
+.block-header__bg,
 .block-header--border,
 .block-header__line {
     position: relative;
 }
-
+.block-header__bg span,
 .block-header--border span,
 .block-header__line span {
     position: relative;
     z-index: 2;
+}
+
+.block-header__bg::before {
+    content: "";
+    height: 100%;
+    width: 23%;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    background-color: #be185d;
 }
 
 .block-header--border::before {
