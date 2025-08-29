@@ -82,6 +82,20 @@
     text-transform: uppercase;
 }
 
+.label span {
+    position: relative;
+}
+
+.label span::before {
+    content: '';
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #c084fc;
+}
+
 .label--margin {
     margin-bottom: 16px;
 }
@@ -265,4 +279,32 @@
     .block-header__line--bottom::before {
         display: none;
     }
+}
+
+/* --------------------------------------------------------------------------------- */
+.link-event {
+    background: url("../img/icons/arrow-purple.svg") right no-repeat;
+    padding-right: 35px;
+    color: #9333ea;
+}
+
+.link-event span {
+    position: relative;
+    display: inline-block;
+    line-height: 1.2;
+}
+
+.link-event span::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    transition: width 0.5s;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+}
+
+.link-event:hover span::after {
+    width: 100%;
 }
