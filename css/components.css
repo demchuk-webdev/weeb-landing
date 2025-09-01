@@ -214,7 +214,7 @@
 .block-header__link span::after {
   content: "";
   position: absolute;
-  width: 0%;
+  width: 0;
   height: 2px;
   transition: width 0.5s;
   left: 0;
@@ -299,7 +299,7 @@
 .link-event span::after {
   content: "";
   position: absolute;
-  width: 0%;
+  width: 0;
   height: 2px;
   transition: width 0.5s;
   left: 0;
